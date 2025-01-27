@@ -9,6 +9,15 @@ pipeline {
     }
 
     stages {
+        stage('Checkout') {
+            steps {
+                script {
+                    // Use WSL to run Git commands
+                    sh 'wsl git clone https://github.com/YourRepo/YourProject.git'
+                }
+            }
+        }
+
         stage('Build') {
             steps {
                 script {
