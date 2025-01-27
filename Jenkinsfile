@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Use WSL to run Git commands
-                    sh 'wsl git clone https://github.com/YourRepo/YourProject.git'
+                    bat 'wsl git clone https://github.com/Aconsumeeverything/tp_jenkins'
                 }
             }
         }
