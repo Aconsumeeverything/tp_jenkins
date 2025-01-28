@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Use WSL to run Git commands
-                    sh 'git clone https://github.com/Aconsumeeverything/tp_jenkins'
+                    sh 'wsl git clone https://github.com/Aconsumeeverything/tp_jenkins'
                 }
             }
         }
@@ -22,7 +22,7 @@ pipeline {
             steps {
                 script {
                     // Construction de l’image Docker
-                    sh "docker build -t sum-python ${DIR_PATH}"
+                    sh "wsl docker build -t sum-python ${DIR_PATH}"
                 }
             }
         }
